@@ -1,0 +1,35 @@
+{
+  "season": "2026",
+  "lastUpdated": "2026-09-07",
+  "totals": {
+    "gp": 1,
+    "gs": 0,
+    "solo": 1,
+    "ast": 0,
+    "tot": 1,
+    "tfl": 0.0,
+    "sacks": 0.0,
+    "pbu": 0,
+    "ff": 0,
+    "fr": 0,
+    "int": 0
+  },
+  "games": [
+    {
+      "week": 1,
+      "date": "Sep 5, 2026",
+      "opponent": "Season opener",
+      "result": "–",
+      "started": false,
+      "solo": 1,
+      "ast": 0,
+      "tot": 1,
+      "tfl": 0.0,
+      "sacks": 0.0,
+      "pbu": 0,
+      "ff": 0,
+      "fr": 0,
+      "int": 0
+    }
+  ]
+}
