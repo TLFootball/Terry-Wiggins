@@ -763,6 +763,7 @@
       gap: 1.5rem;
     }
     .product-card {
+      cursor: pointer;
       background: var(--surface);
       border: 1px solid var(--border);
       overflow: hidden;
@@ -1002,6 +1003,14 @@
     .shop-view-all {
       margin-top: 2.5rem;
       text-align: center;
+    }
+
+    .shop-category-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin: 0 0 1rem;
     }
 
     /* ── FAN PHOTOS ──────────────────────────────────────── */
@@ -1436,91 +1445,186 @@
         <p class="section-label">Official Gear</p>
         <h2 class="section-title">Get the Swag</h2>
         <p class="section-subtitle">Represent #39. All items ship from Phresh Prints Ink.</p>
+
+        <p class="shop-category-label">Adult Unisex</p>
         <div class="shop-grid">
 
-          <!-- PRODUCT 1 — Replica Jersey -->
-          <!-- ⚠️ Replace href with your affiliate / store link. Replace img src with your product photo. -->
           <div class="product-card">
             <div class="product-img">
-              <!-- Swap this img tag for a real product photo -->
-              <div class="product-img-placeholder">
-                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M6 3l3 3 3-3 3 3 3-3v13l-3 3-3-3-3 3-3-3V3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Add Photo</span>
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/legacy_tee_black.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="T. Wiggins Legacy Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>T. Wiggins Legacy Tee</span>
               </div>
               <span class="product-tag">Fan Favorite</span>
             </div>
             <div class="product-body">
-              <span class="product-category">Jersey</span>
-              <span class="product-name">VT Hokies Replica Jersey #39</span>
-              <!-- ⚠️ Update price -->
-              <span class="product-price">$89.99</span>
+              <span class="product-category">Tee · Adult</span>
+              <span class="product-name">T. Wiggins Legacy Tee w/ Name &amp; Number</span>
+              <span class="product-price">$35.00</span>
             </div>
             <div class="product-footer">
-              <!-- ⚠️ Replace href with your store product link -->
-              <a href="https://shop.hokiesports.com/va-tech-hokies/" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
             </div>
           </div>
 
-          <!-- PRODUCT 2 — T-Shirt -->
           <div class="product-card">
             <div class="product-img">
-              <div class="product-img-placeholder">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/definition_tee.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="The Definition Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
                 <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Add Photo</span>
+                <span>The Definition Tee</span>
               </div>
             </div>
             <div class="product-body">
-              <span class="product-category">Apparel</span>
-              <span class="product-name">Hokies Maroon & Orange Tee</span>
-              <span class="product-price">$34.99</span>
+              <span class="product-category">Tee · Adult</span>
+              <span class="product-name">The Definition Tee w/ Name &amp; Number</span>
+              <span class="product-price">$24.84</span>
             </div>
             <div class="product-footer">
-              <a href="https://shop.hokiesports.com/va-tech-hokies/" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
             </div>
           </div>
 
-          <!-- PRODUCT 3 — Hoodie -->
           <div class="product-card">
             <div class="product-img">
-              <div class="product-img-placeholder">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/name_tee_white.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="The Name Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
                 <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Add Photo</span>
+                <span>The Name Tee</span>
               </div>
             </div>
             <div class="product-body">
-              <span class="product-category">Apparel</span>
-              <span class="product-name">Virginia Tech Pullover Hoodie</span>
-              <span class="product-price">$64.99</span>
+              <span class="product-category">Tee · Adult</span>
+              <span class="product-name">The Name Tee w/ Name &amp; Number</span>
+              <span class="product-price">$35.00</span>
             </div>
             <div class="product-footer">
-              <a href="https://shop.hokiesports.com/va-tech-hokies/" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
             </div>
           </div>
 
-          <!-- PRODUCT 4 — Hat -->
           <div class="product-card">
             <div class="product-img">
-              <div class="product-img-placeholder">
-                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 18c0-4 2.686-8 9-8s9 4 9 8M3 18h18M9 18V9.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Add Photo</span>
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/define_legacy_tee.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="Define Legacy Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Define Legacy Tee</span>
               </div>
-              <span class="product-tag">New</span>
             </div>
             <div class="product-body">
-              <span class="product-category">Headwear</span>
-              <span class="product-name">Hokies Structured Snapback</span>
-              <span class="product-price">$32.99</span>
+              <span class="product-category">Tee · Adult</span>
+              <span class="product-name">Define Legacy Tee w/ Back Print</span>
+              <span class="product-price">$24.84</span>
             </div>
             <div class="product-footer">
-              <a href="https://shop.hokiesports.com/va-tech-hokies/" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
             </div>
           </div>
-
-          <!-- ADD MORE PRODUCTS by duplicating the block above -->
 
         </div>
+
+        <p class="shop-category-label" style="margin-top:2.5rem">Hoodies</p>
+        <div class="shop-grid">
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/name_fleece_hoodie.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="The Name Fleece Hoodie" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>The Name Fleece Hoodie</span>
+              </div>
+              <span class="product-tag">Fan Favorite</span>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Hoodie · Adult</span>
+              <span class="product-name">The Name Fleece Hoodie w/ Name &amp; Number</span>
+              <span class="product-price">$45.00</span>
+            </div>
+            <div class="product-footer">
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/legacy_fleece_hoodie.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="Legacy Fleece Hoodie" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Legacy Fleece Hoodie</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Hoodie · Adult</span>
+              <span class="product-name">Legacy Fleece Hoodie w/ Name &amp; Number</span>
+              <span class="product-price">$45.00</span>
+            </div>
+            <div class="product-footer">
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="shop-category-label" style="margin-top:2.5rem">Women's &amp; Youth</p>
+        <div class="shop-grid">
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/legacy_womens_tee.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="T. Wiggins Legacy Women's Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Legacy Women's Tee</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Tee · Women's</span>
+              <span class="product-name">T. Wiggins Legacy Women's Tee w/ Name &amp; Number</span>
+              <span class="product-price">$35.00</span>
+            </div>
+            <div class="product-footer">
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://cdn.inksoft.com/images/publishers/13611/stores/t_wiggins_fan_store/products/legacy_youth_tee.jpg"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   alt="Legacy Youth Tee" loading="lazy">
+              <div class="product-img-placeholder" style="display:none">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M7 3l-4 4 3 1v12h12V8l3-1-4-4-2 2a3 3 0 01-6 0L7 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Legacy Youth Tee</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Tee · Youth</span>
+              <span class="product-name">T. Wiggins Legacy Youth Tee w/ Name &amp; Number</span>
+              <span class="product-price"></span>
+            </div>
+            <div class="product-footer">
+              <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="product-btn">Shop Now ↗</a>
+            </div>
+          </div>
+
+        </div>
+
         <div class="shop-view-all">
-          <a href="https://shop.hokiesports.com/va-tech-hokies/" target="_blank" rel="noopener" class="btn-primary">Browse Full Store ↗</a>
+          <a href="https://stores.inksoft.com/t_wiggins_fan_store/shop/home" target="_blank" rel="noopener" class="btn-primary">Browse Full Store ↗</a>
         </div>
         <p class="shop-disclaimer">
           All purchases are fulfilled by Phresh Prints Ink. This fan site is not affiliated with or endorsed by Virginia Tech or the NCAA.
@@ -1631,6 +1735,14 @@
     }
 
     loadStats();
+
+    // ── PRODUCT CARD CLICK ────────────────────────────────
+    document.querySelectorAll('.product-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return; // let the button handle its own click
+        window.open('https://stores.inksoft.com/t_wiggins_fan_store/shop/home', '_blank', 'noopener');
+      });
+    });
 
     // ── FAN PHOTOS LOADER ─────────────────────────────────
     (function loadFanPhotos() {
