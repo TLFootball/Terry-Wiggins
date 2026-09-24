@@ -1335,6 +1335,28 @@
             <div class="gallery-photo-caption">With Grandpa</div>
           </div>
 
+          <!-- Upload fans-1.jpg to GitHub -->
+          <div class="gallery-photo">
+            <img src="fans-1.jpg" alt="Game day crew in #39 jerseys"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="gallery-placeholder" style="display:none">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              Upload fans-1.jpg
+            </div>
+            <div class="gallery-photo-caption">Game Day Crew</div>
+          </div>
+
+          <!-- Upload fans-2.jpg to GitHub -->
+          <div class="gallery-photo">
+            <img src="fans-2.jpg" alt="Terry with fans at Hokie Nation event"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="gallery-placeholder" style="display:none">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              Upload fans-2.jpg
+            </div>
+            <div class="gallery-photo-caption">Hokie Nation</div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1525,40 +1547,6 @@
     </div>
   </section>
 
-  <!-- FAN PHOTOS -->
-  <section id="fan-photos" aria-label="Fan and family photos">
-    <div class="fan-photos-wrap">
-      <div class="fan-photos-inner">
-        <p class="section-label">Community</p>
-        <h2 class="section-title">Fan &amp; Family</h2>
-        <p class="section-subtitle">Moments with the people who show up every game.</p>
-        <div class="fan-photo-grid" id="fan-photo-grid">
-          <!-- Named family slots — upload matching filenames to repo root -->
-          <div class="fan-photo-card placeholder" id="slot-sisters">
-            <span>Upload sisters.jpg</span>
-            <div class="fan-photo-caption">Portia &amp; Olivia</div>
-          </div>
-          <div class="fan-photo-card placeholder" id="slot-mom">
-            <span>Upload mom.jpg</span>
-            <div class="fan-photo-caption">With Mom</div>
-          </div>
-          <div class="fan-photo-card placeholder" id="slot-dad">
-            <span>Upload dad.jpg</span>
-            <div class="fan-photo-caption">With Dad</div>
-          </div>
-          <div class="fan-photo-card placeholder" id="slot-grandpa">
-            <span>Upload grandpa.jpg</span>
-            <div class="fan-photo-caption">With Grandpa</div>
-          </div>
-          <div class="fan-photo-card placeholder" id="slot-fans1">
-            <span>Upload fans-1.jpg</span>
-            <div class="fan-photo-caption">Game Day Crew</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-name">Terry <span>Wiggins</span> · #39</div>
@@ -1649,34 +1637,6 @@
       });
     });
 
-    // ── FAN PHOTOS LOADER ─────────────────────────────────
-    (function loadFanPhotos() {
-      var slots = [
-        { id: 'slot-sisters', src: 'sisters.jpg', caption: 'Portia & Olivia' },
-        { id: 'slot-mom',     src: 'mom.jpg',     caption: 'With Mom' },
-        { id: 'slot-dad',     src: 'dad.jpg',     caption: 'With Dad' },
-        { id: 'slot-grandpa', src: 'grandpa.jpg', caption: 'With Grandpa' },
-        { id: 'slot-fans1',   src: 'fans-1.jpg',  caption: 'Game Day Crew' }
-      ];
-      slots.forEach(function(slot) {
-        var card = document.getElementById(slot.id);
-        if (!card) return;
-        var img = new Image();
-        img.onload = function() {
-          card.innerHTML = '';
-          var el = document.createElement('img');
-          el.src = slot.src;
-          el.alt = slot.caption;
-          el.loading = 'lazy';
-          card.appendChild(el);
-          var cap = document.createElement('div');
-          cap.className = 'fan-photo-caption';
-          cap.textContent = slot.caption;
-          card.appendChild(cap);
-        };
-        img.src = slot.src;
-      });
-    })();
 
     // Nav scroll effect
     const nav = document.getElementById('main-nav');
