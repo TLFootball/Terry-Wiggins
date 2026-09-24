@@ -1071,11 +1071,11 @@
     }
     .fan-photo-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0.75rem;
       margin-top: 2.5rem;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       .fan-photo-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .fan-photo-card {
@@ -1550,6 +1550,10 @@
             <span>Upload grandpa.jpg</span>
             <div class="fan-photo-caption">With Grandpa</div>
           </div>
+          <div class="fan-photo-card placeholder" id="slot-fans1">
+            <span>Upload fans-1.jpg</span>
+            <div class="fan-photo-caption">Game Day Crew</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1651,7 +1655,8 @@
         { id: 'slot-sisters', src: 'sisters.jpg', caption: 'Portia & Olivia' },
         { id: 'slot-mom',     src: 'mom.jpg',     caption: 'With Mom' },
         { id: 'slot-dad',     src: 'dad.jpg',     caption: 'With Dad' },
-        { id: 'slot-grandpa', src: 'grandpa.jpg', caption: 'With Grandpa' }
+        { id: 'slot-grandpa', src: 'grandpa.jpg', caption: 'With Grandpa' },
+        { id: 'slot-fans1',   src: 'fans-1.jpg',  caption: 'Game Day Crew' }
       ];
       slots.forEach(function(slot) {
         var card = document.getElementById(slot.id);
