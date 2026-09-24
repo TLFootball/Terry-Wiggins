@@ -1071,11 +1071,11 @@
     }
     .fan-photo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 0.75rem;
       margin-top: 2.5rem;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .fan-photo-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .fan-photo-card {
@@ -1094,6 +1094,17 @@
       transition: transform 0.4s ease;
     }
     .fan-photo-card:hover img { transform: scale(1.04); }
+    .fan-photo-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 2rem 1rem 0.85rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.78));
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: #fff;
+      pointer-events: none;
+    }
     .fan-photo-card.placeholder {
       display: flex;
       align-items: center;
@@ -1522,14 +1533,23 @@
         <h2 class="section-title">Fan &amp; Family</h2>
         <p class="section-subtitle">Moments with the people who show up every game.</p>
         <div class="fan-photo-grid" id="fan-photo-grid">
-          <!-- Add images to the repo root named fan-1.jpg, fan-2.jpg, etc. (up to fan-6.jpg) -->
-          <!-- Placeholder cards shown until real photos are added -->
-          <div class="fan-photo-card placeholder"><span>Add fan-1.jpg</span></div>
-          <div class="fan-photo-card placeholder"><span>Add fan-2.jpg</span></div>
-          <div class="fan-photo-card placeholder"><span>Add fan-3.jpg</span></div>
-          <div class="fan-photo-card placeholder"><span>Add fan-4.jpg</span></div>
-          <div class="fan-photo-card placeholder"><span>Add fan-5.jpg</span></div>
-          <div class="fan-photo-card placeholder"><span>Add fan-6.jpg</span></div>
+          <!-- Named family slots — upload matching filenames to repo root -->
+          <div class="fan-photo-card placeholder" id="slot-sisters">
+            <span>Upload sisters.jpg</span>
+            <div class="fan-photo-caption">Portia &amp; Olivia</div>
+          </div>
+          <div class="fan-photo-card placeholder" id="slot-mom">
+            <span>Upload mom.jpg</span>
+            <div class="fan-photo-caption">With Mom</div>
+          </div>
+          <div class="fan-photo-card placeholder" id="slot-dad">
+            <span>Upload dad.jpg</span>
+            <div class="fan-photo-caption">With Dad</div>
+          </div>
+          <div class="fan-photo-card placeholder" id="slot-grandpa">
+            <span>Upload grandpa.jpg</span>
+            <div class="fan-photo-caption">With Grandpa</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1627,30 +1647,30 @@
 
     // ── FAN PHOTOS LOADER ─────────────────────────────────
     (function loadFanPhotos() {
-      const grid = document.getElementById('fan-photo-grid');
-      if (!grid) return;
-      const total = 6;
-      const loaded = [];
-      for (let i = 1; i <= total; i++) {
-        const img = new Image();
-        const src = 'fan-' + i + '.jpg';
+      var slots = [
+        { id: 'slot-sisters', src: 'sisters.jpg', caption: 'Portia & Olivia' },
+        { id: 'slot-mom',     src: 'mom.jpg',     caption: 'With Mom' },
+        { id: 'slot-dad',     src: 'dad.jpg',     caption: 'With Dad' },
+        { id: 'slot-grandpa', src: 'grandpa.jpg', caption: 'With Grandpa' }
+      ];
+      slots.forEach(function(slot) {
+        var card = document.getElementById(slot.id);
+        if (!card) return;
+        var img = new Image();
         img.onload = function() {
-          loaded.push({ i, src });
-          if (loaded.length === 1) {
-            // First real photo found — clear placeholders and rebuild grid
-            grid.innerHTML = '';
-          }
-          const card = document.createElement('div');
-          card.className = 'fan-photo-card';
-          const el = document.createElement('img');
-          el.src = src;
-          el.alt = 'Fan photo ' + i;
+          card.innerHTML = '';
+          var el = document.createElement('img');
+          el.src = slot.src;
+          el.alt = slot.caption;
           el.loading = 'lazy';
           card.appendChild(el);
-          grid.appendChild(card);
+          var cap = document.createElement('div');
+          cap.className = 'fan-photo-caption';
+          cap.textContent = slot.caption;
+          card.appendChild(cap);
         };
-        img.src = src;
-      }
+        img.src = slot.src;
+      });
     })();
 
     // Nav scroll effect
