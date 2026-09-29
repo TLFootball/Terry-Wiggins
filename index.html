@@ -1115,6 +1115,111 @@
     }
     .fan-photo-card.placeholder span { opacity: 0.4; }
 
+    /* ── SWAG SUBMIT ─────────────────────────────────────── */
+    .swag-wrap {
+      background: var(--surface);
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .swag-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .swag-form {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+    .swag-form label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .swag-form input[type="text"],
+    .swag-form input[type="email"],
+    .swag-form textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .swag-form input:focus,
+    .swag-form textarea:focus {
+      outline: none;
+      border-color: var(--orange-dim);
+    }
+    .swag-upload-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--bg);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      padding: 1.25rem 1rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .swag-upload-label:hover { border-color: var(--orange-dim); }
+    .swag-upload-label svg {
+      width: 1.5rem; height: 1.5rem;
+      stroke: var(--orange); flex-shrink: 0;
+    }
+    .swag-upload-label span {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .swag-upload-label input { display: none; }
+    .swag-file-name {
+      font-size: 0.8rem;
+      color: var(--orange);
+      margin-top: 0.25rem;
+      min-height: 1.2em;
+    }
+    .swag-note {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+    .swag-submit-btn {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.85rem 2rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      align-self: flex-start;
+    }
+    .swag-submit-btn:hover { background: var(--orange-light); transform: translateY(-2px); }
+    .swag-success {
+      display: none;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .swag-success p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; }
+
     /* ── FOOTER ─────────────────────────────────────────── */
     footer {
       background: var(--surface);
@@ -1151,6 +1256,7 @@
       <li><a href="#stats">Stats</a></li>
       <li><a href="#fan-zone">Fan Zone</a></li>
       <li><a href="#shop">Shop</a></li>
+      <li><a href="#swag-submit">Your Swag</a></li>
       <li><a href="nil.html" style="color:var(--orange)">NIL</a></li>
     </ul>
     <button class="nav-theme" id="theme-toggle" aria-label="Toggle theme">Light</button>
@@ -1537,6 +1643,54 @@
     </div>
   </section>
 
+  <!-- SWAG SUBMIT -->
+  <section id="swag-submit" aria-label="Fan swag photo submission">
+    <div class="swag-wrap">
+      <div class="swag-inner">
+        <p class="section-label">Fan Spotlight</p>
+        <h2 class="section-title">Show Us Your Swag</h2>
+        <p class="section-subtitle">Rocking #39 gear? Send us your photo — approved submissions get featured on the site.</p>
+
+        <form class="swag-form" id="swag-form"
+              action="https://formspree.io/f/SWAG_FORM_ID"
+              method="POST"
+              enctype="multipart/form-data">
+
+          <div>
+            <label for="swag-name">Your Name</label>
+            <input type="text" id="swag-name" name="name" placeholder="First name or nickname" required />
+          </div>
+
+          <div>
+            <label for="swag-instagram">Instagram Handle <span style="opacity:.5">(optional)</span></label>
+            <input type="text" id="swag-instagram" name="instagram" placeholder="@yourhandle" />
+          </div>
+
+          <div>
+            <label>Photo</label>
+            <label class="swag-upload-label" for="swag-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span id="swag-file-label">Tap to choose a photo</span>
+              <input type="file" id="swag-photo" name="photo" accept="image/*" required />
+            </label>
+            <div class="swag-file-name" id="swag-file-name"></div>
+          </div>
+
+          <p class="swag-note">📋 All submissions are reviewed before being featured. By submitting you confirm you have rights to share this photo.</p>
+
+          <button type="submit" class="swag-submit-btn">Submit Photo ↗</button>
+        </form>
+
+        <div class="swag-success" id="swag-success">
+          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--orange);letter-spacing:.06em">Photo Received!</h3>
+          <p>Thanks for repping #39. We'll review your submission and reach out if it gets featured.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-name">Terry <span>Wiggins</span> · #39</div>
@@ -1627,6 +1781,43 @@
       });
     });
 
+
+    // ── SWAG FORM ─────────────────────────────────────────
+    (function() {
+      var photoInput = document.getElementById('swag-photo');
+      var fileLabel  = document.getElementById('swag-file-label');
+      var fileName   = document.getElementById('swag-file-name');
+      if (photoInput) {
+        photoInput.addEventListener('change', function() {
+          var f = this.files[0];
+          if (f) {
+            fileLabel.textContent = f.name;
+            fileName.textContent  = (f.size / 1024 / 1024).toFixed(1) + ' MB';
+          }
+        });
+      }
+      var swagForm = document.getElementById('swag-form');
+      if (swagForm) {
+        swagForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var data = new FormData(swagForm);
+          fetch(swagForm.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(r) {
+            if (r.ok) {
+              swagForm.style.display = 'none';
+              document.getElementById('swag-success').style.display = 'block';
+            } else {
+              alert('Something went wrong. Please try again.');
+            }
+          }).catch(function() {
+            alert('Something went wrong. Please try again.');
+          });
+        });
+      }
+    })();
 
     // Nav scroll effect
     const nav = document.getElementById('main-nav');
