@@ -2,7 +2,7 @@
   "season": "2026",
   "lastUpdated": "2026-10-26",
   "totals": {
-    "gp": 6, "gs": 0, "solo": 3, "ast": 1, "tot": 3,
+    "gp": 6, "gs": 0, "solo": 3, "ast": 1, "tot": 4,
     "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0
   },
   "games": [
@@ -11,7 +11,7 @@
     { "week": 4, "date": "Sep 26, 2026", "opponent": "at Boston College", "result": "W 21-14", "started": false,
       "solo": 0, "ast": 0, "tot": 0, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
     { "week": 5, "date": "Oct 2, 2026", "opponent": "Pitt", "result": "L 33-35", "started": false,
-      "solo": 1, "ast": 0, "tot": 0, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
+      "solo": 1, "ast": 0, "tot": 1, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
     { "week": 6, "date": "Oct 10, 2026", "opponent": "at Cal", "result": "L 20-25", "started": false,
       "solo": 0, "ast": 0, "tot": 0, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
     { "week": 7, "date": "Oct 17, 2026", "opponent": "Georgia Tech", "result": "W 34-24", "started": false,
