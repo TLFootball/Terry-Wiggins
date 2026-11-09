@@ -1,9 +1,9 @@
 {
   "season": "2026",
-  "lastUpdated": "2026-10-26",
+  "lastUpdated": "2026-11-09",
   "totals": {
-    "gp": 6, "gs": 0, "solo": 3, "ast": 1, "tot": 4,
-    "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0
+    "gp": 7, "gs": 0, "solo": 4, "ast": 2, "tot": 6,
+    "tfl": 1.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0
   },
   "games": [
     { "week": 1, "date": "Sep 5, 2026", "opponent": "VMI", "result": "W 73-3", "started": false,
@@ -17,6 +17,8 @@
     { "week": 7, "date": "Oct 17, 2026", "opponent": "Georgia Tech", "result": "W 34-24", "started": false,
       "solo": 2, "ast": 0, "tot": 2, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
     { "week": 8, "date": "Oct 24, 2026", "opponent": "at Clemson", "result": "W 20-16", "started": false,
-      "solo": 0, "ast": 0, "tot": 0, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 }
+      "solo": 0, "ast": 0, "tot": 0, "tfl": 0.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 },
+    { "week": 9, "date": "Nov 6, 2026", "opponent": "at SMU", "result": "L 28-51", "started": false,
+      "solo": 1, "ast": 1, "tot": 2, "tfl": 1.0, "sacks": 0.0, "pbu": 0, "ff": 0, "fr": 0, "int": 0 }
   ]
 }
